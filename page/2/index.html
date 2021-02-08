@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>南岩666のBlog - 既然选择前方，只顾风雨兼程</title><meta name="description" content="南岩的个人博客,记录点滴生活,分享技术经验。"><meta name="keywords" content="个人博客,博客,技术,Blog"><meta name="author" content="南岩"><meta name="copyright" content="南岩"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://pic.baixiongz.com/2020/08/13/f3ef89c20ba5d.png"><link rel="canonical" href="https://nanyan666.com/page/2/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta property="og:type" content="website"><meta property="og:title" content="南岩666のBlog"><meta property="og:url" content="https://nanyan666.com/page/2/"><meta property="og:site_name" content="南岩666のBlog"><meta property="og:description" content="南岩的个人博客,记录点滴生活,分享技术经验。"><meta property="og:image" content="https://pic.baixiongz.com/2020/08/18/1bb6a000f567e.jpeg"><meta property="article:published_time" content="2021-02-08T04:44:17.565Z"><meta property="article:modified_time" content="2021-02-08T04:44:17.565Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = '1'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?58974f3a494cbab640d3f378d27cd99a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-175176632-2"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-175176632-2');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.0.2',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":30,"position":"top","messagePrev":"本篇文章更新于","messageNext":"天之前，文章内容与事实可能有些许不同。"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"limitCount":50,"languages":{"author":"作者: 南岩","link":"链接: ","source":"来源: 南岩666のBlog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: true    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2021-02-08 12:44:17'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/background.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/webkit-scrollbar.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/font.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/footer-transparent.css"><meta name="generator" content="Hexo 5.0.2"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://pic.baixiongz.com/2020/08/18/1bb6a000f567e.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">33</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">35</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-envelope"></i><span> 闲言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><header class="full_page" id="page-header" style="background-image: url(https://gitee.com/HenryHe613/img/raw/master/null/26a510d44af51.jpeg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">南岩666のBlog</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-envelope"></i><span> 闲言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">南岩666のBlog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/HenryHe613" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:henryhe613@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/5af6.html" title="白嫖党-免费稳定/S/S/R">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200725175436.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="白嫖党-免费稳定/S/S/R"></a></div><div class="recent-post-info"><a class="article-title" href="/5af6.html" title="白嫖党-免费稳定/S/S/R">白嫖党-免费稳定/S/S/R</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-24T14:47:30.000Z" title="发表于 2020-07-24 22:47:30">2020-07-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Skills/">Skills</a></span></div><div class="content">白嫖党-免费稳定/S/S/R前言
+声明：我没有打广告！没有收一分广告钱！你看我像这样的人吗？
+
+我一直再找Vρn，但是很遗憾，真的很难找到稳定的。
+尤其是现在仍是疫情期间，国外流言蜚语很多，国家对不实消息打击力度很大，所以真的很难找。中国共产党万岁！！！
+还有Vρn的技术真的太老了，G|F|W不用吹灰之力就封了你。服务端的IP立刻就没得用了。
+这时真正的科|学|上|网就得靠SS/SSR/V2ray了
+介绍关于SSRSSR的全称是ShadowSocksR，是SS，即ShadowSocks的升级版。由于SS安全性没有SSR好，所以我不介绍SS的内容。
+我从维基百科上摘了一点有关SSR的内容：
+“Shadowsocks是一个免费的开源 加密协议项目，在中国大陆广泛用于规避Internet审查。它是由一位名叫“ clowwindy”的中国程序员于2012年创建的，此后该协议已实现了多种实现。[4] [5] Shadowsocks本身并不是代理，但是通常，客户端软件将连接到第三方socks5代理，在其运行的计算机上说出shadowsocks语言，然后可以将其定向到互联网流量上。类似于SSH隧道。 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/dd57.html" title="阿里云免费建网盘">     <img class="post_bg" data-lazy-src="https://s1.ax1x.com/2020/07/12/U1TEIe.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="阿里云免费建网盘"></a></div><div class="recent-post-info"><a class="article-title" href="/dd57.html" title="阿里云免费建网盘">阿里云免费建网盘</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-12T01:24:24.000Z" title="发表于 2020-07-12 09:24:24">2020-07-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">阿里云免费建网盘前言我白嫖到了微软的25TB储存，但是下载不方便，想用这点容量搭一个网盘。
+考虑到我没有可以使用的云服务器，所需就选择了Oneindex-Serverless。
+看了阿里云官网的Oneindex-serverless搭建文档，踩了好几个坑。官方文档
+然鹅阿里云的文章也不是自己写的。阿里嫖了知乎的一篇文章传送门
+
+枯了枯了，网上还有很多文档，但是都是一摸一样的。
+了解Onedrive-ServerlessOneindex前段时间被删库了，作者亲自删的，TA也没说为什么。包括Goindex也被删库了。
+Oneindex-Serverless是另一个人做的，仓库地址在这里https://github.com/LiuChangFreeman/OneIndex-Serverless
+Oneindex是基于PHP的，需要PHP空间，像我这种白嫖党是不可能买的，这辈子都不可能 
+而Oneindex是基于Serverless云函数的，不用PHP空间，对我来说十分有吸引力。
+搭建Onedrive-Serverless开通函数计算和对象储存OSS注册阿里云
+先开通函数计算和对象储存OSS。 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/7fe9.html" title="利用Coding部署Hexo">     <img class="post_bg" data-lazy-src="https://pic.baixiongz.com/2020/08/01/e2b6025345335.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="利用Coding部署Hexo"></a></div><div class="recent-post-info"><a class="article-title" href="/7fe9.html" title="利用Coding部署Hexo">利用Coding部署Hexo</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-11T02:21:50.000Z" title="发表于 2020-07-11 10:21:50">2020-07-11</time></span></div><div class="content">利用Coding部署Hexo前言之前看到CYF在博客写了利用Travis-CI实现在线更新Hexo
+想到我也要高中去了/滑稽脸，我也试了一下Travis-CI。但是可能我技术不到家，次次都失败，英文界面也看得我头大。
+后来在Coding里面看见了持续集成，心里一动，说不定这玩意儿还真行。
+上传Hexo源文件到Coding参考我之前的文章吧，我都懒得复制了传送门，不过那篇我也没写完/偷懒。
+之后我们来到Coding界面。
+
+可能会没有持续集成，需要到左下角的项目设置里打开。
+
+你们可能会好奇，为什么我不用持续部署。因为我的博客文件太大了，Coding只支持128MB及以下的html文件部署。唉，还是Github好。
+配置构建计划在持续集成的子目录中找到构建计划，创建构建计划，并拉到最下面，选择自定义构建过程。
+
+然后自定义一下红框内的内容。我没有测试过Github等其他的仓库会不会出发Coding的构建，毕竟我用Coding来托管我的Hexo源代码。
+
+然后我们进入如下界面了。
+
+为了方便传送 Jenkinsfile 配置，我采用了文本编辑器。
+
+12345678910111213141 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/879a.html" title="Matery主题添加Artitalk">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200710113833.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Matery主题添加Artitalk"></a></div><div class="recent-post-info"><a class="article-title" href="/879a.html" title="Matery主题添加Artitalk">Matery主题添加Artitalk</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-10T03:33:22.000Z" title="发表于 2020-07-10 11:33:22">2020-07-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">Matery主题添加Artitalk前言先上链接，这是我的说说界面：闲言碎语
+有时候啊，hexo想发说说/微语总是有点麻烦，这时候Artitalk出现了。
+安装ArtitalkMatery主题没有自带Artitalk集成，所以要自己安装。
+先生成一个说说的页面：
+1hexo new page &quot;shuoshuo&quot;
+
+然后在blog/source/下面出现了shuoshuo这个文件夹，里面有一个index.md文件。
+打开这个文件，现在里面是这样的：
+12345---title: shuoshuodate: 2020-06-05 11:15:37type: shuoshuo\-\-\-
+
+把Front-Matery改成这样：
+12345---title: 闲言date: 2020-06-05 11:15:37type: &quot;shuoshuo&quot;\-\-\-
+
+当然title你可以自定义哦
+之前真的很头疼，Artitalk和Valine不能同时使用，因为两者的后台都是基于LeanCloud的，所以不能一起使用。我也曾因此放弃过搭建说说。
+我也试过在Fro ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/u7r6.html" title="获取微软应用程序的API">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/20200710200652.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="获取微软应用程序的API"></a></div><div class="recent-post-info"><a class="article-title" href="/u7r6.html" title="获取微软应用程序的API">获取微软应用程序的API</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-08T03:15:30.000Z" title="发表于 2020-07-08 11:15:30">2020-07-08</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">获取微软应用程序的API有时候微软应用程序API获取的时候会抽，半天没反应。
+这时需要手动到Azure获取应用机密和应用ID。
+打开https://portal.azure.com/，登录你的微软账号。
+登录完成后，可以看到如下界面，选择管理 Azure Active Directory 。
+
+选择左边的应用注册，并注册新应用。
+
+写好应用名称，方便以后管理应用。并填写URI，以便验证身份后进行重定向。
+
+此时，应用程序ID就出现了。就在下图的红框里
+
+现在我们来找应用机密。
+打开左边的证书与密码。
+
+新建客户端密码
+
+添加一个说明，便于管理机密，然后酌情选择失效时间。我这里选择了从不。
+
+然后应用机密就出现了，右面有个小按钮，可以复制。
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/58.html" title="更换设备继续Hexo">     <img class="post_bg" data-lazy-src="https://pic.baixiongz.com/2020/08/09/39b3a7eda0525.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="更换设备继续Hexo"></a></div><div class="recent-post-info"><a class="article-title" href="/58.html" title="更换设备继续Hexo">更换设备继续Hexo</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-16T15:05:12.000Z" title="发表于 2020-06-16 23:05:12">2020-06-16</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">一直想写这么一篇博文，但是没有机会写。这次换了设备，于是写了这篇。push到代码托管平台
+
+注意* 我这里源文件托管选择了Coding，网站还在Github上。毕竟国内速度好一点。
+
+还有，这篇文章是写给像我一样的Git小白的。如果是大佬就不用浪费宝贵时间了。如果有什么不对支持，还请提出让我改正。
+
+注册Coding账号现在Coding改版了，加了个什么辣鸡团队的东西，有点不舒服。
+push源文件先生成ssh文件，以便和git仓库进行同步。
+1ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;
+
+找到个人文件夹下面的.ssh目录，打开，复制里面的pub公钥。
+Coding主界面右上角个人设置，打开SSH公钥，把复制的pub公钥加进去。
+打开你的Hexo根目录，并右键Git Bash Here，测试你的SSH配置对不对，能不能连接Coding。代码如下：
+1ssh -T git@git.coding.net
+
+
+2020/7/8 23:06 补充提示：现在Coding把ssh地址改了，现在正确的是git@e.coding.net。现在我总是连不上，看了官方的文 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/cd88.html" title="拒绝使用Gitalk和Gitment">     <img class="post_bg" data-lazy-src="https://s1.ax1x.com/2020/06/06/tcekc9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拒绝使用Gitalk和Gitment"></a></div><div class="recent-post-info"><a class="article-title" href="/cd88.html" title="拒绝使用Gitalk和Gitment">拒绝使用Gitalk和Gitment</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-06T12:36:14.000Z" title="发表于 2020-06-06 20:36:14">2020-06-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">前言之前我用的是Gitalk，毕竟方便啊，Matery主题自带，只需要配置OAuth就好了。
+但是在V2XE里看见有人不推荐使用，我看了一下，也有点心有余悸。
+同时Gitalk总是会抽，老是发不了评论。
+找Gitalk的OAuth
+以xiaoleGun的博客做例子，轻喷！！！
+
+
+我找到了一个Gitalk，右键另存为。
+
+
+html文件用VSCode打开，
+
+搜索clientID或者clientSecret，可以明显发现是明文保存。
+clientID和clientSecret的攻击方法我没研究过，但是根据Github和Gitalk官方的文档，这两个泄露是可以删除ID所有者的所有公有仓库的。可见危害之大。
+写在最后我写这篇博文是希望Gitalk和Gitment的作者可以引起重视，虽然还没有这种事件发生，但是这是个隐患。
+希望看到本文的各位不要利用这个漏洞攻击，对攻击事件本人概不负责，本文提供学术交流，没有任何攻击倾向。
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/876.html" title="Hexo链接优化">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/4602746.jfif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo链接优化"></a></div><div class="recent-post-info"><a class="article-title" href="/876.html" title="Hexo链接优化">Hexo链接优化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-06T12:00:16.000Z" title="发表于 2020-06-06 20:00:16">2020-06-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">前言按照Matery官方的文档，我在安装Matery主题时，也安装了中文链接转拼音的插件，即hexo-permalink-pinyin插件。
+但是事后我发现，这个链接实在太长了，分享的时候着实很不方便。
+所以我找到了这个插件：hexo-abbrlink
+卸载hexo-permalink-pinyin插件安装hexo-abbrlink之前必须卸载之前的插件，以免冲突。
+如果你没安装过这个插件，可以直接跳过这一步。
+右键Hexo根目录，点击Git Bash Here。
+1npm uninstall hexo-permalink-pinyin
+
+卸载之后，到Hexo根目录下的_config.yml中找到以下的配置并全部删除。
+123permalink_pinyin:  enable: true  separator: &#x27;-&#x27; # default: &#x27;-&#x27;
+
+这样第一步就完成了。
+安装hexo-abbrlink插件右键Hexo根目录，点击Git Bash Here。
+1npm install hexo-abbrlink --save
+
+安装好后，在Hex ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/5741.html" title="Matery添加在线聊天功能">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/7468176.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Matery添加在线聊天功能"></a></div><div class="recent-post-info"><a class="article-title" href="/5741.html" title="Matery添加在线聊天功能">Matery添加在线聊天功能</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-04T23:51:36.000Z" title="发表于 2020-06-05 07:51:36">2020-06-05</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">前言Matery主题默认支持两种在线聊天工具。一是DaoVoice，二是Tidio。
+
+上面一点黑灰色的是Tidio，下面一点蓝色的是DaoVoice。（Tidio按钮的颜色有5种可以选，DaoVoice不清楚，没有深入研究过）
+我个人比较喜欢Tidio，毕竟长得好看哈哈。同时也不会挡住红色的主页按钮。
+两个同时开启也可以，但肯定是有点奇奇怪怪的。
+安装TiDio=&gt;去Tidio官网获取public_key官网传送门
+注册不多讲，不需要实名认证。有点慢是肯定的，毕竟用了CloudFlare的CDN。
+
+我们只需要Public Key，Private Key需要保管好，不能泄露。
+安装Tidio=&gt;在_config.yml中启用Tidio打开主题文件夹的_config.yml，在大约468行找到Tidio。
+
+把enable改为true，然后再public_key后填上从Tidio官网获取的Public Key。
+
+注意
+public_key:后面必须有一个空格，不然Hexo会报错。
+
+之后，hexo cl&amp;&amp;hexo g -d看看效果，还行吧？
+安装DaoV ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/942c.html" title="Valine配置及安装">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/OIP.jfif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Valine配置及安装"></a></div><div class="recent-post-info"><a class="article-title" href="/942c.html" title="Valine配置及安装">Valine配置及安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-04T09:39:48.000Z" title="发表于 2020-06-04 17:39:48">2020-06-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">注册Valine并获取Appid和AppkeyValine注册很奇怪，不是去官网注册，而是去LeanCloud注册。
+
+[!TIP]
+注意，免费版的Valine每天强制休眠6小时，也就是说，一天中有6小时无法评论。
+
+Valine有两个版本，一个是国际版，还有一个是国内版。国际版不需要实名认证，国内版需要实名认证。
+我选择国际版hh
+链接： 国际版 国内版
+注册不用我多说。
+
+点击创建应用,选择开发版，名字任意。
+
+进入项目，选择 设置=&gt;应用Keys=&gt;Credentials
+你可以看见AppID和AppKey。
+Matery主题开启并配置Valine打开主题文件的_config.yml，找到Valine，大概在303行左右。
+1234567891011121314# The configuration of the Valine comment module is not activated by default.# To use it, activate the configuration item and set appId and appKey.# Valine  ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://pic.baixiongz.com/2020/08/18/1bb6a000f567e.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">南岩</div><div class="author-info__description">南岩的个人博客,记录点滴生活,分享技术经验。</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">33</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">35</div></a></div><div class="card-info-data-item is-center"><a href="/categories"><div class="headline">分类</div><div class="length_num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/HenryHe613/"><i class="fab fa-github"></i><span>Star Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/HenryHe613" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:henryhe613@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">南岩的小站</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a class="aside-post-cover" href="/29825.html" title="9月26日周末摘记"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/09/39b3a7eda0525.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="9月26日周末摘记"/></a><div class="aside-post-info"><a class="aside-post-title" href="/29825.html" title="9月26日周末摘记">9月26日周末摘记</a><time class="aside-post_meta post-meta-date" datetime="2020-09-26T10:51:37.000Z" title="发表于 2020-09-26 18:51:37">2020-09-26</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/1695.html" title="MarkDown常用语法"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/13/3d6f3fe9ccccb.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MarkDown常用语法"/></a><div class="aside-post-info"><a class="aside-post-title" href="/1695.html" title="MarkDown常用语法">MarkDown常用语法</a><time class="aside-post_meta post-meta-date" datetime="2020-08-12T05:13:56.000Z" title="发表于 2020-08-12 13:13:56">2020-08-12</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/ay84.html" title="美化CMD"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/12/1d828d918e56d.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="美化CMD"/></a><div class="aside-post-info"><a class="aside-post-title" href="/ay84.html" title="美化CMD">美化CMD</a><time class="aside-post_meta post-meta-date" datetime="2020-08-12T03:18:45.000Z" title="发表于 2020-08-12 11:18:45">2020-08-12</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/238e.html" title="发现Gridea这块新大陆"><img class="aside-post-bg" data-lazy-src="https://gitee.com/HenryHe613/img/raw/master/u=1397627197,175951460&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="发现Gridea这块新大陆"/></a><div class="aside-post-info"><a class="aside-post-title" href="/238e.html" title="发现Gridea这块新大陆">发现Gridea这块新大陆</a><time class="aside-post_meta post-meta-date" datetime="2020-08-11T12:13:19.000Z" title="发表于 2020-08-11 20:13:19">2020-08-11</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/e978.html" title="Matery主题优化"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/02/69707c4d7cb91.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Matery主题优化"/></a><div class="aside-post-info"><a class="aside-post-title" href="/e978.html" title="Matery主题优化">Matery主题优化</a><time class="aside-post_meta post-meta-date" datetime="2020-08-02T11:38:58.000Z" title="发表于 2020-08-02 19:38:58">2020-08-02</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Skills/"><span class="card-category-list-name">Skills</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Software/"><span class="card-category-list-name">Software</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Videos/"><span class="card-category-list-name">Videos</span><span class="card-category-list-count">2</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href='/tags/API/' style='font-size:16px; color:rgb(40, 151, 58)'>API</a><a href='/tags/Artitalk/' style='font-size:21px; color:rgb(67, 92, 11)'>Artitalk</a><a href='/tags/CDN/' style='font-size:19px; color:rgb(68, 15, 191)'>CDN</a><a href='/tags/Chromium/' style='font-size:21px; color:rgb(145, 52, 164)'>Chromium</a><a href='/tags/Coding/' style='font-size:16px; color:rgb(108, 147, 104)'>Coding</a><a href='/tags/Edge/' style='font-size:16px; color:rgb(26, 153, 98)'>Edge</a><a href='/tags/Freenom/' style='font-size:18px; color:rgb(192, 189, 7)'>Freenom</a><a href='/tags/GitHub/' style='font-size:18px; color:rgb(32, 116, 9)'>GitHub</a><a href='/tags/Hexo/' style='font-size:20px; color:rgb(48, 136, 25)'>Hexo</a><a href='/tags/LeanCloud/' style='font-size:17px; color:rgb(190, 195, 176)'>LeanCloud</a><a href='/tags/MarkDown/' style='font-size:20px; color:rgb(161, 161, 174)'>MarkDown</a><a href='/tags/Matery/' style='font-size:20px; color:rgb(40, 84, 162)'>Matery</a><a href='/tags/NotePad/' style='font-size:18px; color:rgb(200, 97, 2)'>NotePad++</a><a href='/tags/OneDrive/' style='font-size:17px; color:rgb(140, 76, 21)'>OneDrive</a><a href='/tags/Onedrive/' style='font-size:17px; color:rgb(95, 96, 151)'>Onedrive</a><a href='/tags/Others/' style='font-size:18px; color:rgb(6, 6, 97)'>Others</a><a href='/tags/SSR/' style='font-size:17px; color:rgb(126, 185, 86)'>SSR</a><a href='/tags/Tidio/' style='font-size:19px; color:rgb(153, 188, 163)'>Tidio</a><a href='/tags/VSCode/' style='font-size:16px; color:rgb(46, 60, 118)'>VSCode</a><a href='/tags/Valine/' style='font-size:18px; color:rgb(126, 104, 30)'>Valine</a><a href='/tags/Vercel/' style='font-size:16px; color:rgb(72, 53, 189)'>Vercel</a><a href='/tags/Videos/' style='font-size:19px; color:rgb(36, 160, 62)'>Videos</a><a href='/tags/Windows/' style='font-size:16px; color:rgb(83, 95, 122)'>Windows</a><a href='/tags/hosts/' style='font-size:20px; color:rgb(49, 173, 33)'>hosts</a><a href='/tags/vnp/' style='font-size:21px; color:rgb(153, 62, 60)'>vnp</a><a href='/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7/' style='font-size:20px; color:rgb(95, 196, 140)'>免费域名申请</a><a href='/tags/%E5%8D%9A%E5%AE%A2/' style='font-size:20px; color:rgb(66, 26, 60)'>博客</a><a href='/tags/%E5%BE%AE%E8%BD%AF/' style='font-size:19px; color:rgb(47, 123, 20)'>微软</a><a href='/tags/%E6%A2%AF%E5%AD%90/' style='font-size:16px; color:rgb(57, 86, 193)'>梯子</a><a href='/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/' style='font-size:16px; color:rgb(63, 154, 172)'>浏览器</a><a href='/tags/%E7%94%B5%E4%BF%A1/' style='font-size:21px; color:rgb(37, 22, 50)'>电信</a><a href='/tags/%E7%A0%B4%E8%A7%A3/' style='font-size:18px; color:rgb(195, 40, 127)'>破解</a><a href='/tags/%E7%BD%91%E5%9D%80and%E4%BB%A3%E7%A0%81/' style='font-size:21px; color:rgb(102, 12, 79)'>网址and代码</a><a href='/tags/%E7%BD%91%E7%9B%98/' style='font-size:19px; color:rgb(6, 36, 187)'>网盘</a><a href='/tags/%E8%BD%AF%E4%BB%B6/' style='font-size:16px; color:rgb(170, 54, 124)'>软件</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/08/"><span class="card-archive-list-date">八月 2019</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">33</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" publish_date="2020/8/13">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 南岩</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js', () => {
+      pangu.spacingElementById('content-inner')
+    })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguFn)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "既然选择前方，只顾风雨兼程。".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '既'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/baidu-auto-push.js"></script><script src="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/banner.js"></script><canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script></div></body></html>

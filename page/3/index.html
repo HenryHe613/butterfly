@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>南岩666のBlog - 既然选择前方，只顾风雨兼程</title><meta name="description" content="南岩的个人博客,记录点滴生活,分享技术经验。"><meta name="keywords" content="个人博客,博客,技术,Blog"><meta name="author" content="南岩"><meta name="copyright" content="南岩"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://pic.baixiongz.com/2020/08/13/f3ef89c20ba5d.png"><link rel="canonical" href="https://nanyan666.com/page/3/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta property="og:type" content="website"><meta property="og:title" content="南岩666のBlog"><meta property="og:url" content="https://nanyan666.com/page/3/"><meta property="og:site_name" content="南岩666のBlog"><meta property="og:description" content="南岩的个人博客,记录点滴生活,分享技术经验。"><meta property="og:image" content="https://pic.baixiongz.com/2020/08/18/1bb6a000f567e.jpeg"><meta property="article:published_time" content="2021-02-08T04:44:17.571Z"><meta property="article:modified_time" content="2021-02-08T04:44:17.571Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = '1'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?58974f3a494cbab640d3f378d27cd99a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-175176632-2"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-175176632-2');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.0.2',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":30,"position":"top","messagePrev":"本篇文章更新于","messageNext":"天之前，文章内容与事实可能有些许不同。"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"limitCount":50,"languages":{"author":"作者: 南岩","link":"链接: ","source":"来源: 南岩666のBlog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: true    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2021-02-08 12:44:17'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/background.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/webkit-scrollbar.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/font.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/footer-transparent.css"><meta name="generator" content="Hexo 5.0.2"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://pic.baixiongz.com/2020/08/18/1bb6a000f567e.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">33</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">35</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-envelope"></i><span> 闲言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><header class="full_page" id="page-header" style="background-image: url(https://gitee.com/HenryHe613/img/raw/master/null/26a510d44af51.jpeg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">南岩666のBlog</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-envelope"></i><span> 闲言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">南岩666のBlog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/HenryHe613" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:henryhe613@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/b77d.html" title="VSCode更改中文和更改字体">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/henryhe613/pic/images/13540653.jfif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VSCode更改中文和更改字体"></a></div><div class="recent-post-info"><a class="article-title" href="/b77d.html" title="VSCode更改中文和更改字体">VSCode更改中文和更改字体</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-04T09:02:59.000Z" title="发表于 2020-06-04 17:02:59">2020-06-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">VSCode更改中文前提是你得安装了VSCode。下载地址：传送门
+最好是下载Stable版本的，Insiders版的可能会不稳定
+安装好之后应该是英文的。网上的方法可能有点不适用，我介绍一下我的方法。
+下载Chinese插件。传送门
+
+在右侧点击Download Extension，下载VSIX扩展文件（类似Chromium的CRX）。
+在VSCode插件栏中，右上角···，选择从VSIX安装，选择刚刚下载的插件。
+重启一下VSCode，应该就变中文了。
+VSCode安装JetBrainsMono-Bold字体。我最喜欢JetBrainsMono-Bold的字体了。下载地址_传送门
+
+VSCode中打开设置=&gt;文本编辑器=&gt;字体=&gt;Font Family，
+改为&#39;JetBrains Mono&#39;.
+前提是你已经安装了JetBrainsMono-Bold字体。
+如果要使用其他字体，请先安装，再到控制面板里找到字体文件夹，确定字体在文件夹中的名字，再复制到VSCode。不然VSCode认不出来。我就栽在坑里爬了许久。
+这是我的配置：
+123456&#123 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/f59b.html" title="Loading">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/屏幕截图(2).png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Loading"></a></div><div class="recent-post-info"><a class="article-title" href="/f59b.html" title="Loading">Loading</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-30T13:29:47.000Z" title="发表于 2020-05-30 21:29:47">2020-05-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">在Hexo根目录下新建scripts文件夹，里面再新建loading-pages.js
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157/* global hexo */&quot;use strict&quot;;hexo.extend.filter.register(&#x27;after_render:html&# ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/9198.html" title="CloudFlare的Workers">     <img class="post_bg" data-lazy-src="https://pic.baixiongz.com/2020/08/17/fbd96c2be2626.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CloudFlare的Workers"></a></div><div class="recent-post-info"><a class="article-title" href="/9198.html" title="CloudFlare的Workers">CloudFlare的Workers</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-30T13:14:07.000Z" title="发表于 2020-05-30 21:14:07">2020-05-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Skills/">Skills</a></span></div><div class="content">CloudFlare的Workers回源IP加速访问前言我的Hexo博客一直部署在Github，但是国内的GithubCDN节点被DNS污染了，只能连接美国的Github。
+固然。速度不是很快。PING都200+ms
+所以我开启了CloudFlare的CDN，但是还是不太理想。CloudFlare默认分配的免费节点已经被玩坏了。
+然鹅，CloudFlare有免费的Workers，支持 JavaScript、Rust、C 、 C++ 
+
+部署Workers你得先有CloudFlare的账号CloudFlare
+然后打开Workers：///我不会告诉你我哪里来的那么多域名的/滑稽/post/f3a0.html
+
+然后我们创建Workers。我记得初次打开会有提示设置子域的。
+
+之后打开如下界面，把脚本中的代码全部删除，然后复制以下代码
+
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/a15e.html" title="GitHub的raw无法访问">     <img class="post_bg" data-lazy-src="https://pic.baixiongz.com/2020/08/09/39b3a7eda0525.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GitHub的raw无法访问"></a></div><div class="recent-post-info"><a class="article-title" href="/a15e.html" title="GitHub的raw无法访问">GitHub的raw无法访问</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-30T12:13:45.000Z" title="发表于 2020-05-30 20:13:45">2020-05-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Skills/">Skills</a></span></div><div class="content">raw.githubusercontent.com收到Qos无法访问
+其实没必要用梯子，修改hosts即可。
+这是网上大神的hosts：
+1199.232.4.133 raw.githubusercontent.com
+
+也可以去https://www.ipaddress.com/ 查
+这是我查得的：
+1199.232.68.133 raw.githubusercontent.com
+
+hosts文件在这里（Windows）
+1C:\Windows\System32\drivers\etc\hosts
+
+推荐UAC的Notepad，可以直接保存。
+
+注意更新hosts后，需要cmd运行ipconfig /flushdns才行
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/7653.html" title="去掉Chromium的禁用开发者扩展提示">     <img class="post_bg" data-lazy-src="https://pic.baixiongz.com/2020/08/17/e65b4efbf8d7f.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="去掉Chromium的禁用开发者扩展提示"></a></div><div class="recent-post-info"><a class="article-title" href="/7653.html" title="去掉Chromium的禁用开发者扩展提示">去掉Chromium的禁用开发者扩展提示</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-24T02:24:23.000Z" title="发表于 2020-05-24 10:24:23">2020-05-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">去掉Chromium的禁用开发者扩展提示对于开发人员来说，Chrome显然是一个必需品。庞大的插件库十分方便。但是Google不知为什么就加了这么一个弹出，十分恶心。
+祭出大神的dll替换工具，可点击下载。
+去除Chrome请停用以开发者模式运行的扩展程序_点击下载
+edge的二次开发做的不错，都把chrome.dll给改了。
+像Cent Browser就没改，不过Cent和Chrome的图标确实有点像~~
+安装目录在这里：
+1C:\Program Files (x86)\Microsoft\Edge\Application\83.0.478.37
+
+注意这是默认的安装路径，不同的版本号可能有所不同！！！
+
+记得把Edge关了，然后我们把msedge.dll改成chrome.dll，把刚刚下载的软件解压，拷贝到edge根目录下（就是刚刚代码块里的）
+用管理员模式运行“去除Chrome请停用以开发者模式运行的扩展程序”，
+
+点应用，成功后，把dll的名字改回msedge.dll。
+再打开edge。
+是不是OK了？
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/6799.html" title="新旧Edge浏览器共存">     <img class="post_bg" data-lazy-src="https://pic.baixiongz.com/2020/08/17/061e573cef57f.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新旧Edge浏览器共存"></a></div><div class="recent-post-info"><a class="article-title" href="/6799.html" title="新旧Edge浏览器共存">新旧Edge浏览器共存</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-24T00:41:03.000Z" title="发表于 2020-05-24 08:41:03">2020-05-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">
+1234567891011~~1. 在Windows搜索中搜索组策略编辑器。2. 导航到计算机配置——》打开管理模板&gt; Microsoft Edge更新&gt;应用程序3. 选择“允许Microsoft Edge并排浏览器体验”。4. 点击“修改政策”设置。5. 选择“启用”，然后单击“确定”。~~
+
+以上是网上的方法，Chromium Edge v83版已不适用。
+因为在gpedit里找不到“允许Microsoft Edge并排浏览器体验”。
+现在只能用注册表。
+把一下对应代码复制到.reg文件中，然后重新安装Chromium Edge就好了。
+添加旧EDGE
+1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate]&quot;Allowsxs&quot;&#x3D;dword:00000001
+
+移除旧EDGE
+1234Windows Registry Editor Version 5.00-[HKEY_LOCAL_MACHINE\S ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/dbe5.html" title="更换Chromium内核浏览器无法上网">     <img class="post_bg" data-lazy-src="https://pic.baixiongz.com/2020/08/17/8095a25a25a57.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="更换Chromium内核浏览器无法上网"></a></div><div class="recent-post-info"><a class="article-title" href="/dbe5.html" title="更换Chromium内核浏览器无法上网">更换Chromium内核浏览器无法上网</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-23T11:34:03.000Z" title="发表于 2020-05-23 19:34:03">2020-05-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">更换Chromium内核浏览器无法上网、说实话我的英语也不是特别好，所以一直再找Github汉化版。但是Cent Browser内嵌的Google翻译不咋地，老是抽。看网友都用360极速浏览器，我也真香了，用了360还比较良心的极速浏览器。
+但是360也抽了。
+
+于是我试试遨游浏览器，因为这个用的人也很多。
+也抽了。
+
+我好奇啊，连续两个浏览器抽了。
+应该是我的环境问题。
+我先把遨游换成IE内核。
+“国产”浏览器大都是Chromium和IE双内核。
+嘿嘿，遨游好了~~
+那为什么Chromium不行？
+我猜是三个浏览器用同一个内核所致。
+Browser```我用了```PP谷歌助手```，之前为了访问谷歌，找到的这么一个插件。1234567891011121314151617181920212223附上&#96;&#96;&#96;PP谷歌助手&#96;&#96;&#96;在[极简插件](https:&#x2F;&#x2F;chrome.zzzmh.cn&#x2F;index) 的链接：[PP谷歌助手](https:&#x2F;&#x2F;chrome.zzzmh.cn&#x2F;inf ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/9e79.html" title="电信网关F612破解">     <img class="post_bg" data-lazy-src="https://s1.ax1x.com/2020/05/17/YgOeHg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="电信网关F612破解"></a></div><div class="recent-post-info"><a class="article-title" href="/9e79.html" title="电信网关F612破解">电信网关F612破解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-17T01:57:00.000Z" title="发表于 2020-05-17 09:57:00">2020-05-17</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Skills/">Skills</a></span></div><div class="content">电信家庭网关中兴F612破解超级账号
+网上有许多教程，但是大都有误，这是站长亲自试验得出的方法。
+
+最近换了电信的千兆光猫，看见网上有类似教程，我就试了一下。
+期间有许多坑，这里就不一一讲了。
+打开电脑的CMD窗口
+输入命令，一直Ping网关的128端口：
+1ping 192.168.1.1 -l 128 -t
+
+不要关闭原来的窗口，再打开一个CMD，输入命令：
+1telnet 192.168.1.1 10128
+
+账号：root密码：Zte521
+在telnet中输入：
+1sendcmd 1 DB p DevAuthInfo
+慢慢找，就能找到超级管理员密码了。账号一般是telecomadmin
+如果要把网关的拨号模式改为桥接模式，其实不用超级管理员账号的。
+http://192.168.1.1/bridge_route.gch
+打开这个网址即可了。
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/f3a0.html" title="申请Freenom域名的正确做法">     <img class="post_bg" data-lazy-src="https://s1.ax1x.com/2020/05/10/Y8Ak1s.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="申请Freenom域名的正确做法"></a></div><div class="recent-post-info"><a class="article-title" href="/f3a0.html" title="申请Freenom域名的正确做法">申请Freenom域名的正确做法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-10T11:20:31.000Z" title="发表于 2020-05-10 19:20:31">2020-05-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Skills/">Skills</a></span></div><div class="content">申请Freenom域名的正确做法Freenom官网
+
+注意：本教程是站长的亲身经验，会有很多坑，请大家多多包涵。
+
+对于新手个人站长，买一个几十块甚至几百块的域名显然不太合适。所以，Freenom出现了。它能帮我们免费注册.ga .ml .tk .gq .cf的顶级域名。这些顶级域名都是小国家的，分别是加蓬、马里共和国、托克劳群岛、赤道几内亚和中非共和国。既然天上掉那么大个馅饼，谁不要呢？于是百度上出现了一堆关于Freenom域名申请的教程。然而，经过我的检验，这些教程要么是 菜 有误，要么就是 赚流量 不会。
+主要步骤： 1.加快Freenom的访问速度 2.注册Freenom账号 3.注册免费域名 4.更改域名解析
+第一次尝试让我们先去Freenom官网瞅瞅。
+Freenom官网
+好慢，还没有图片，真丑。
+
+更奇怪的是，，，我居然能够把搜索框的文字删掉。。。
+
+这可把我吓坏了。这网站居然长这样。
+上网一搜，嗯嗯，似乎需要梯子。
+可以看看我之前的博文梯子 ，但是这里用不着。但是我之前就用了，可以注册，但是更繁琐，我找了一个更好的方法。
+但是还是有必要介绍原方法。
+我拿来梯子，爬！！！ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/d87e.html" title="史上最好用的编辑器">     <img class="post_bg" data-lazy-src="https://s1.ax1x.com/2020/05/16/YckZJU.md.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="史上最好用的编辑器"></a></div><div class="recent-post-info"><a class="article-title" href="/d87e.html" title="史上最好用的编辑器">史上最好用的编辑器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-03T12:05:05.000Z" title="发表于 2020-05-03 20:05:05">2020-05-03</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">之前用win自带的记事本，功能太鸡肋了。啥都没有，而且最不能忍受的就是，微软的程序猿自己认为很聪明，给UTF-8加了BOM。
+然后，许多代码出错emmm
+直接上链接：这里，v7.8.5_x64
+附上哈希值，怕CloudFlare的CDN啥时候抽了，下载出错：
+123CRC32: 80A1EBD6MD5: CD8C07848895C989C81C9D88C8BFEA88SHA-1: 820C75A6E7B5835AB01E45DE728AE3434500ABF5
+
+
+压力测试Start Test
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://pic.baixiongz.com/2020/08/18/1bb6a000f567e.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">南岩</div><div class="author-info__description">南岩的个人博客,记录点滴生活,分享技术经验。</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">33</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">35</div></a></div><div class="card-info-data-item is-center"><a href="/categories"><div class="headline">分类</div><div class="length_num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/HenryHe613/"><i class="fab fa-github"></i><span>Star Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/HenryHe613" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:henryhe613@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">南岩的小站</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a class="aside-post-cover" href="/29825.html" title="9月26日周末摘记"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/09/39b3a7eda0525.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="9月26日周末摘记"/></a><div class="aside-post-info"><a class="aside-post-title" href="/29825.html" title="9月26日周末摘记">9月26日周末摘记</a><time class="aside-post_meta post-meta-date" datetime="2020-09-26T10:51:37.000Z" title="发表于 2020-09-26 18:51:37">2020-09-26</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/1695.html" title="MarkDown常用语法"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/13/3d6f3fe9ccccb.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MarkDown常用语法"/></a><div class="aside-post-info"><a class="aside-post-title" href="/1695.html" title="MarkDown常用语法">MarkDown常用语法</a><time class="aside-post_meta post-meta-date" datetime="2020-08-12T05:13:56.000Z" title="发表于 2020-08-12 13:13:56">2020-08-12</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/ay84.html" title="美化CMD"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/12/1d828d918e56d.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="美化CMD"/></a><div class="aside-post-info"><a class="aside-post-title" href="/ay84.html" title="美化CMD">美化CMD</a><time class="aside-post_meta post-meta-date" datetime="2020-08-12T03:18:45.000Z" title="发表于 2020-08-12 11:18:45">2020-08-12</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/238e.html" title="发现Gridea这块新大陆"><img class="aside-post-bg" data-lazy-src="https://gitee.com/HenryHe613/img/raw/master/u=1397627197,175951460&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="发现Gridea这块新大陆"/></a><div class="aside-post-info"><a class="aside-post-title" href="/238e.html" title="发现Gridea这块新大陆">发现Gridea这块新大陆</a><time class="aside-post_meta post-meta-date" datetime="2020-08-11T12:13:19.000Z" title="发表于 2020-08-11 20:13:19">2020-08-11</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/e978.html" title="Matery主题优化"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/02/69707c4d7cb91.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Matery主题优化"/></a><div class="aside-post-info"><a class="aside-post-title" href="/e978.html" title="Matery主题优化">Matery主题优化</a><time class="aside-post_meta post-meta-date" datetime="2020-08-02T11:38:58.000Z" title="发表于 2020-08-02 19:38:58">2020-08-02</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Skills/"><span class="card-category-list-name">Skills</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Software/"><span class="card-category-list-name">Software</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Videos/"><span class="card-category-list-name">Videos</span><span class="card-category-list-count">2</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href='/tags/API/' style='font-size:16px; color:rgb(40, 151, 58)'>API</a><a href='/tags/Artitalk/' style='font-size:21px; color:rgb(67, 92, 11)'>Artitalk</a><a href='/tags/CDN/' style='font-size:19px; color:rgb(68, 15, 191)'>CDN</a><a href='/tags/Chromium/' style='font-size:21px; color:rgb(145, 52, 164)'>Chromium</a><a href='/tags/Coding/' style='font-size:16px; color:rgb(108, 147, 104)'>Coding</a><a href='/tags/Edge/' style='font-size:16px; color:rgb(26, 153, 98)'>Edge</a><a href='/tags/Freenom/' style='font-size:18px; color:rgb(192, 189, 7)'>Freenom</a><a href='/tags/GitHub/' style='font-size:18px; color:rgb(32, 116, 9)'>GitHub</a><a href='/tags/Hexo/' style='font-size:20px; color:rgb(48, 136, 25)'>Hexo</a><a href='/tags/LeanCloud/' style='font-size:17px; color:rgb(190, 195, 176)'>LeanCloud</a><a href='/tags/MarkDown/' style='font-size:20px; color:rgb(161, 161, 174)'>MarkDown</a><a href='/tags/Matery/' style='font-size:20px; color:rgb(40, 84, 162)'>Matery</a><a href='/tags/NotePad/' style='font-size:18px; color:rgb(200, 97, 2)'>NotePad++</a><a href='/tags/OneDrive/' style='font-size:17px; color:rgb(140, 76, 21)'>OneDrive</a><a href='/tags/Onedrive/' style='font-size:17px; color:rgb(95, 96, 151)'>Onedrive</a><a href='/tags/Others/' style='font-size:18px; color:rgb(6, 6, 97)'>Others</a><a href='/tags/SSR/' style='font-size:17px; color:rgb(126, 185, 86)'>SSR</a><a href='/tags/Tidio/' style='font-size:19px; color:rgb(153, 188, 163)'>Tidio</a><a href='/tags/VSCode/' style='font-size:16px; color:rgb(46, 60, 118)'>VSCode</a><a href='/tags/Valine/' style='font-size:18px; color:rgb(126, 104, 30)'>Valine</a><a href='/tags/Vercel/' style='font-size:16px; color:rgb(72, 53, 189)'>Vercel</a><a href='/tags/Videos/' style='font-size:19px; color:rgb(36, 160, 62)'>Videos</a><a href='/tags/Windows/' style='font-size:16px; color:rgb(83, 95, 122)'>Windows</a><a href='/tags/hosts/' style='font-size:20px; color:rgb(49, 173, 33)'>hosts</a><a href='/tags/vnp/' style='font-size:21px; color:rgb(153, 62, 60)'>vnp</a><a href='/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7/' style='font-size:20px; color:rgb(95, 196, 140)'>免费域名申请</a><a href='/tags/%E5%8D%9A%E5%AE%A2/' style='font-size:20px; color:rgb(66, 26, 60)'>博客</a><a href='/tags/%E5%BE%AE%E8%BD%AF/' style='font-size:19px; color:rgb(47, 123, 20)'>微软</a><a href='/tags/%E6%A2%AF%E5%AD%90/' style='font-size:16px; color:rgb(57, 86, 193)'>梯子</a><a href='/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/' style='font-size:16px; color:rgb(63, 154, 172)'>浏览器</a><a href='/tags/%E7%94%B5%E4%BF%A1/' style='font-size:21px; color:rgb(37, 22, 50)'>电信</a><a href='/tags/%E7%A0%B4%E8%A7%A3/' style='font-size:18px; color:rgb(195, 40, 127)'>破解</a><a href='/tags/%E7%BD%91%E5%9D%80and%E4%BB%A3%E7%A0%81/' style='font-size:21px; color:rgb(102, 12, 79)'>网址and代码</a><a href='/tags/%E7%BD%91%E7%9B%98/' style='font-size:19px; color:rgb(6, 36, 187)'>网盘</a><a href='/tags/%E8%BD%AF%E4%BB%B6/' style='font-size:16px; color:rgb(170, 54, 124)'>软件</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/08/"><span class="card-archive-list-date">八月 2019</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">33</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" publish_date="2020/8/13">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 南岩</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js', () => {
+      pangu.spacingElementById('content-inner')
+    })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguFn)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "既然选择前方，只顾风雨兼程。".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '既'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/baidu-auto-push.js"></script><script src="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/banner.js"></script><canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script></div></body></html>

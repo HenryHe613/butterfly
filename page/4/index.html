@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>南岩666のBlog - 既然选择前方，只顾风雨兼程</title><meta name="description" content="南岩的个人博客,记录点滴生活,分享技术经验。"><meta name="keywords" content="个人博客,博客,技术,Blog"><meta name="author" content="南岩"><meta name="copyright" content="南岩"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://pic.baixiongz.com/2020/08/13/f3ef89c20ba5d.png"><link rel="canonical" href="https://nanyan666.com/page/4/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta property="og:type" content="website"><meta property="og:title" content="南岩666のBlog"><meta property="og:url" content="https://nanyan666.com/page/4/"><meta property="og:site_name" content="南岩666のBlog"><meta property="og:description" content="南岩的个人博客,记录点滴生活,分享技术经验。"><meta property="og:image" content="https://pic.baixiongz.com/2020/08/18/1bb6a000f567e.jpeg"><meta property="article:published_time" content="2021-02-08T04:44:17.578Z"><meta property="article:modified_time" content="2021-02-08T04:44:17.578Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = '1'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?58974f3a494cbab640d3f378d27cd99a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-175176632-2"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-175176632-2');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.0.2',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":30,"position":"top","messagePrev":"本篇文章更新于","messageNext":"天之前，文章内容与事实可能有些许不同。"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"limitCount":50,"languages":{"author":"作者: 南岩","link":"链接: ","source":"来源: 南岩666のBlog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: true    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2021-02-08 12:44:17'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/background.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/webkit-scrollbar.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/font.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/footer-transparent.css"><meta name="generator" content="Hexo 5.0.2"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://pic.baixiongz.com/2020/08/18/1bb6a000f567e.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">33</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">35</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-envelope"></i><span> 闲言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><header class="full_page" id="page-header" style="background-image: url(https://gitee.com/HenryHe613/img/raw/master/null/26a510d44af51.jpeg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">南岩666のBlog</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-envelope"></i><span> 闲言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">南岩666のBlog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/HenryHe613" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:henryhe613@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/c0a3.html" title="梯子">     <img class="post_bg" data-lazy-src="https://s1.ax1x.com/2020/05/16/Yc8q39.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="梯子"></a></div><div class="recent-post-info"><a class="article-title" href="/c0a3.html" title="梯子">梯子</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-02T08:18:06.000Z" title="发表于 2020-05-02 16:18:06">2020-05-02</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Software/">Software</a></span></div><div class="content">
+  
+  
+    Hey, password is required here.
+    
+  
+  c6edc15832af92205655610fe2efe7a8ecf8f269b366384eb31b03fc482b84f3531b6359ee020bbf754df44463ff8c18955c989584c55a1f9433f377fc413421134c10c003bcfec4a27decfbcc01a993f8b2e9b3ded2a7adee3ab3e6f2ad8aa7e589816a389e88cee80c5d410de18d86b4704cc9588d6467bf5717d2601c7888a398aabea60c79fc21f79542e9ba16aade04889a51a7a4033773fe500fae47743d3d7cc8b41048a0318d58b28207de360633c02e0891e93076c584b960dc31c6251197394995c4a0ef40f87eeac85a578cfedd0093433004099cd09f6a435c6 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/1583.html" title="第一次使用GitHub+Hexo">     <img class="post_bg" data-lazy-src="https://s1.ax1x.com/2020/05/16/YcGnUS.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一次使用GitHub+Hexo"></a></div><div class="recent-post-info"><a class="article-title" href="/1583.html" title="第一次使用GitHub+Hexo">第一次使用GitHub+Hexo</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-19T11:57:46.000Z" title="发表于 2020-04-19 19:57:46">2020-04-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Skills/">Skills</a></span></div><div class="content">
+Git下载：传送门
+
+以小白的眼光教你搭建Github+Hexo   之前我接触过的博客程序，是用PHP的Wordpress。但是毕竟我是个初三学生，没法租服务器，也就放弃了搭建个人博客的想法。
+
+但是后来，我在知乎上遇到了一个大佬，和我一样呢，也是初三。推荐一下TA的博客吧，做个友链。
+
+这是TA的Blog：
+12https:&#x2F;&#x2F;blog.cyfan.top&#x2F; 
+
+话不多说，直接讲怎么搭建Hexo。
+建立Github仓库
+注释：这个github仓库是用来放网站的！！！
+
+Github不用我多说，上官网 https://github.com .注册账号。英文不好的话emmm我也不能救你，用翻译软件吧。
+
+创建一个仓库，看图！！
+
+
+这时候，你的仓库应该是这样的。
+
+但这是我创建README.md文件后的样子，如果你没有创建README.md文件，那么你的仓库可能是这样的：
+
+不管怎样，都是对的。
+然后，我们来创建Pages。
+创建Github Pages在你的仓库上方，会有一个“Settings”按钮，点击它。
+
+往下翻，你会看到Github Pages ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/a57e.html" title="Matery官方文档">     <img class="post_bg" data-lazy-src="https://pic.baixiongz.com/2020/08/09/39b3a7eda0525.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Matery官方文档"></a></div><div class="recent-post-info"><a class="article-title" href="/a57e.html" title="Matery官方文档">Matery官方文档</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-08-02T12:32:48.000Z" title="发表于 2019-08-02 20:32:48">2019-08-02</time></span></div><div class="content">hexo-theme-matery🇺🇸English Document | 国内访问示例 (http://blinkfox.com) | Github 部署演示示例 (https://blinkfox.github.io) | QQ 交流群1（已满）: 926552981 | QQ 交流群2（推荐）: 971887688
+
+这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。
+
+特性
+简单漂亮，文章内容美观易读
+Material Design 设计
+响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现
+首页轮播文章及每天动态切换 Banner 图片
+瀑布流式的博客文章列表（文章无特色图片时会有 24 张漂亮的图片代替）
+时间轴式的归档页
+词云的标签页和雷达图的分类页
+丰富的关于我页面（包括关于我、文章统计图、我的项目、我的技能、相册等）
+可自定义的数据的友情链接页面
+支持文章置顶和文章打赏
+支持 MathJax
+TOC 目录
+可设置复制文章内容时追加版权信息
+可设置阅读文章时做密码验证
+Gitalk、Gitment、Valine 和 Disqus ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://pic.baixiongz.com/2020/08/18/1bb6a000f567e.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">南岩</div><div class="author-info__description">南岩的个人博客,记录点滴生活,分享技术经验。</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">33</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">35</div></a></div><div class="card-info-data-item is-center"><a href="/categories"><div class="headline">分类</div><div class="length_num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/HenryHe613/"><i class="fab fa-github"></i><span>Star Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/HenryHe613" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:henryhe613@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">南岩的小站</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a class="aside-post-cover" href="/29825.html" title="9月26日周末摘记"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/09/39b3a7eda0525.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="9月26日周末摘记"/></a><div class="aside-post-info"><a class="aside-post-title" href="/29825.html" title="9月26日周末摘记">9月26日周末摘记</a><time class="aside-post_meta post-meta-date" datetime="2020-09-26T10:51:37.000Z" title="发表于 2020-09-26 18:51:37">2020-09-26</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/1695.html" title="MarkDown常用语法"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/13/3d6f3fe9ccccb.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MarkDown常用语法"/></a><div class="aside-post-info"><a class="aside-post-title" href="/1695.html" title="MarkDown常用语法">MarkDown常用语法</a><time class="aside-post_meta post-meta-date" datetime="2020-08-12T05:13:56.000Z" title="发表于 2020-08-12 13:13:56">2020-08-12</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/ay84.html" title="美化CMD"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/12/1d828d918e56d.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="美化CMD"/></a><div class="aside-post-info"><a class="aside-post-title" href="/ay84.html" title="美化CMD">美化CMD</a><time class="aside-post_meta post-meta-date" datetime="2020-08-12T03:18:45.000Z" title="发表于 2020-08-12 11:18:45">2020-08-12</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/238e.html" title="发现Gridea这块新大陆"><img class="aside-post-bg" data-lazy-src="https://gitee.com/HenryHe613/img/raw/master/u=1397627197,175951460&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="发现Gridea这块新大陆"/></a><div class="aside-post-info"><a class="aside-post-title" href="/238e.html" title="发现Gridea这块新大陆">发现Gridea这块新大陆</a><time class="aside-post_meta post-meta-date" datetime="2020-08-11T12:13:19.000Z" title="发表于 2020-08-11 20:13:19">2020-08-11</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/e978.html" title="Matery主题优化"><img class="aside-post-bg" data-lazy-src="https://pic.baixiongz.com/2020/08/02/69707c4d7cb91.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Matery主题优化"/></a><div class="aside-post-info"><a class="aside-post-title" href="/e978.html" title="Matery主题优化">Matery主题优化</a><time class="aside-post_meta post-meta-date" datetime="2020-08-02T11:38:58.000Z" title="发表于 2020-08-02 19:38:58">2020-08-02</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Skills/"><span class="card-category-list-name">Skills</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Software/"><span class="card-category-list-name">Software</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Videos/"><span class="card-category-list-name">Videos</span><span class="card-category-list-count">2</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href='/tags/API/' style='font-size:16px; color:rgb(40, 151, 58)'>API</a><a href='/tags/Artitalk/' style='font-size:21px; color:rgb(67, 92, 11)'>Artitalk</a><a href='/tags/CDN/' style='font-size:19px; color:rgb(68, 15, 191)'>CDN</a><a href='/tags/Chromium/' style='font-size:21px; color:rgb(145, 52, 164)'>Chromium</a><a href='/tags/Coding/' style='font-size:16px; color:rgb(108, 147, 104)'>Coding</a><a href='/tags/Edge/' style='font-size:16px; color:rgb(26, 153, 98)'>Edge</a><a href='/tags/Freenom/' style='font-size:18px; color:rgb(192, 189, 7)'>Freenom</a><a href='/tags/GitHub/' style='font-size:18px; color:rgb(32, 116, 9)'>GitHub</a><a href='/tags/Hexo/' style='font-size:20px; color:rgb(48, 136, 25)'>Hexo</a><a href='/tags/LeanCloud/' style='font-size:17px; color:rgb(190, 195, 176)'>LeanCloud</a><a href='/tags/MarkDown/' style='font-size:20px; color:rgb(161, 161, 174)'>MarkDown</a><a href='/tags/Matery/' style='font-size:20px; color:rgb(40, 84, 162)'>Matery</a><a href='/tags/NotePad/' style='font-size:18px; color:rgb(200, 97, 2)'>NotePad++</a><a href='/tags/OneDrive/' style='font-size:17px; color:rgb(140, 76, 21)'>OneDrive</a><a href='/tags/Onedrive/' style='font-size:17px; color:rgb(95, 96, 151)'>Onedrive</a><a href='/tags/Others/' style='font-size:18px; color:rgb(6, 6, 97)'>Others</a><a href='/tags/SSR/' style='font-size:17px; color:rgb(126, 185, 86)'>SSR</a><a href='/tags/Tidio/' style='font-size:19px; color:rgb(153, 188, 163)'>Tidio</a><a href='/tags/VSCode/' style='font-size:16px; color:rgb(46, 60, 118)'>VSCode</a><a href='/tags/Valine/' style='font-size:18px; color:rgb(126, 104, 30)'>Valine</a><a href='/tags/Vercel/' style='font-size:16px; color:rgb(72, 53, 189)'>Vercel</a><a href='/tags/Videos/' style='font-size:19px; color:rgb(36, 160, 62)'>Videos</a><a href='/tags/Windows/' style='font-size:16px; color:rgb(83, 95, 122)'>Windows</a><a href='/tags/hosts/' style='font-size:20px; color:rgb(49, 173, 33)'>hosts</a><a href='/tags/vnp/' style='font-size:21px; color:rgb(153, 62, 60)'>vnp</a><a href='/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7/' style='font-size:20px; color:rgb(95, 196, 140)'>免费域名申请</a><a href='/tags/%E5%8D%9A%E5%AE%A2/' style='font-size:20px; color:rgb(66, 26, 60)'>博客</a><a href='/tags/%E5%BE%AE%E8%BD%AF/' style='font-size:19px; color:rgb(47, 123, 20)'>微软</a><a href='/tags/%E6%A2%AF%E5%AD%90/' style='font-size:16px; color:rgb(57, 86, 193)'>梯子</a><a href='/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/' style='font-size:16px; color:rgb(63, 154, 172)'>浏览器</a><a href='/tags/%E7%94%B5%E4%BF%A1/' style='font-size:21px; color:rgb(37, 22, 50)'>电信</a><a href='/tags/%E7%A0%B4%E8%A7%A3/' style='font-size:18px; color:rgb(195, 40, 127)'>破解</a><a href='/tags/%E7%BD%91%E5%9D%80and%E4%BB%A3%E7%A0%81/' style='font-size:21px; color:rgb(102, 12, 79)'>网址and代码</a><a href='/tags/%E7%BD%91%E7%9B%98/' style='font-size:19px; color:rgb(6, 36, 187)'>网盘</a><a href='/tags/%E8%BD%AF%E4%BB%B6/' style='font-size:16px; color:rgb(170, 54, 124)'>软件</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/08/"><span class="card-archive-list-date">八月 2019</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">33</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" publish_date="2020/8/13">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 南岩</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js', () => {
+      pangu.spacingElementById('content-inner')
+    })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguFn)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "既然选择前方，只顾风雨兼程。".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '既'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/baidu-auto-push.js"></script><script src="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/banner.js"></script><canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script></div></body></html>

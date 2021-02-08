@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Matery添加在线聊天功能 | 南岩666のBlog</title><meta name="description" content="前言Matery主题默认支持两种在线聊天工具。一是DaoVoice，二是Tidio。  上面一点黑灰色的是Tidio，下面一点蓝色的是DaoVoice。（Tidio按钮的颜色有5种可以选，DaoVoice不清楚，没有深入研究过） 我个人比较喜欢Tidio，毕竟长得好看哈哈。同时也不会挡住红色的主页按钮。 两个同时开启也可以，但肯定是有点奇奇怪怪的。 安装TiDio&#x3D;&gt;去Tidio官网获取pu"><meta name="keywords" content="博客,Hexo,Tidio"><meta name="author" content="南岩"><meta name="copyright" content="南岩"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://pic.baixiongz.com/2020/08/13/f3ef89c20ba5d.png"><link rel="canonical" href="https://nanyan666.com/5741.html"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta property="og:type" content="article"><meta property="og:title" content="Matery添加在线聊天功能"><meta property="og:url" content="https://nanyan666.com/5741.html"><meta property="og:site_name" content="南岩666のBlog"><meta property="og:description" content="前言Matery主题默认支持两种在线聊天工具。一是DaoVoice，二是Tidio。  上面一点黑灰色的是Tidio，下面一点蓝色的是DaoVoice。（Tidio按钮的颜色有5种可以选，DaoVoice不清楚，没有深入研究过） 我个人比较喜欢Tidio，毕竟长得好看哈哈。同时也不会挡住红色的主页按钮。 两个同时开启也可以，但肯定是有点奇奇怪怪的。 安装TiDio&#x3D;&gt;去Tidio官网获取pu"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/7468176.jpg"><meta property="article:published_time" content="2020-06-04T23:51:36.000Z"><meta property="article:modified_time" content="2021-02-03T08:57:30.632Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = '1'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?58974f3a494cbab640d3f378d27cd99a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-175176632-2"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-175176632-2');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.0.2',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":30,"position":"top","messagePrev":"本篇文章更新于","messageNext":"天之前，文章内容与事实可能有些许不同。"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"limitCount":50,"languages":{"author":"作者: 南岩","link":"链接: ","source":"来源: 南岩666のBlog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: true    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2021-02-03 16:57:30'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/background.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/webkit-scrollbar.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/font.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/footer-transparent.css"><meta name="generator" content="Hexo 5.0.2"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://pic.baixiongz.com/2020/08/18/1bb6a000f567e.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">33</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">35</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-envelope"></i><span> 闲言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85TiDio-gt-%E5%8E%BBTidio%E5%AE%98%E7%BD%91%E8%8E%B7%E5%8F%96public-key"><span class="toc-number">2.</span> <span class="toc-text">安装TiDio&#x3D;&gt;去Tidio官网获取public_key</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Tidio-gt-%E5%9C%A8-config-yml%E4%B8%AD%E5%90%AF%E7%94%A8Tidio"><span class="toc-number">3.</span> <span class="toc-text">安装Tidio&#x3D;&gt;在_config.yml中启用Tidio</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85DaoVoice-gt-%E5%8E%BBTidio%E5%AE%98%E7%BD%91%E8%8E%B7%E5%8F%96appid"><span class="toc-number">4.</span> <span class="toc-text">安装DaoVoice&#x3D;&gt;去Tidio官网获取appid</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85DaoVoice-gt-%E5%9C%A8-config-yml%E4%B8%AD%E5%90%AF%E7%94%A8DaoVoice"><span class="toc-number">5.</span> <span class="toc-text">安装DaoVoice&#x3D;&gt;在_config.yml中启用DaoVoice</span></a></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/henryhe613/pic/img/7468176.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">南岩666のBlog</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-envelope"></i><span> 闲言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Matery添加在线聊天功能</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-06-04T23:51:36.000Z" title="发表于 2020-06-05 07:51:36">2020-06-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-03T08:57:30.632Z" title="更新于 2021-02-03 16:57:30">2021-02-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Software/">Software</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Matery主题默认支持两种在线聊天工具。一是DaoVoice，二是Tidio。</p>
+<p><img src= "https://pic.baixiongz.com/2020/08/11/5e6c7df845912.gif" data-lazy-src="https://s1.ax1x.com/2020/06/05/tD38JS.png" alt="tD38JS.png"></p>
+<p>上面一点黑灰色的是Tidio，下面一点蓝色的是DaoVoice。（Tidio按钮的颜色有5种可以选，DaoVoice不清楚，没有深入研究过）</p>
+<p>我个人比较喜欢Tidio，毕竟长得好看哈哈。同时也不会挡住红色的主页按钮。</p>
+<p>两个同时开启也可以，但肯定是有点奇奇怪怪的。</p>
+<h1 id="安装TiDio-gt-去Tidio官网获取public-key"><a href="#安装TiDio-gt-去Tidio官网获取public-key" class="headerlink" title="安装TiDio=&gt;去Tidio官网获取public_key"></a>安装TiDio=&gt;去Tidio官网获取public_key</h1><p><a target="_blank" rel="noopener" href="https://www.tidio.com/">官网传送门</a></p>
+<p>注册不多讲，不需要实名认证。有点慢是肯定的，毕竟用了CloudFlare的CDN。</p>
+<p><img src= "https://pic.baixiongz.com/2020/08/11/5e6c7df845912.gif" data-lazy-src="https://s1.ax1x.com/2020/06/05/tD8iOs.png" alt="tD8iOs.png"></p>
+<p>我们只需要Public Key，Private Key需要保管好，不能泄露。</p>
+<h1 id="安装Tidio-gt-在-config-yml中启用Tidio"><a href="#安装Tidio-gt-在-config-yml中启用Tidio" class="headerlink" title="安装Tidio=&gt;在_config.yml中启用Tidio"></a>安装Tidio=&gt;在_config.yml中启用Tidio</h1><p>打开主题文件夹的<code>_config.yml</code>，在大约468行找到Tidio。</p>
+<p><img src= "https://pic.baixiongz.com/2020/08/11/5e6c7df845912.gif" data-lazy-src="https://s1.ax1x.com/2020/06/05/tD8a1e.png" alt="tD8a1e.png"></p>
+<p>把<code>enable</code>改为<code>true</code>，然后再<code>public_key</code>后填上从Tidio官网获取的Public Key。</p>
+<blockquote>
+<p>注意</p>
+<p><code>public_key:</code>后面必须有一个空格，不然Hexo会报错。</p>
+</blockquote>
+<p>之后，hexo cl&amp;&amp;hexo g -d看看效果，还行吧？</p>
+<h1 id="安装DaoVoice-gt-去Tidio官网获取appid"><a href="#安装DaoVoice-gt-去Tidio官网获取appid" class="headerlink" title="安装DaoVoice=&gt;去Tidio官网获取appid"></a>安装DaoVoice=&gt;去Tidio官网获取appid</h1><p><a target="_blank" rel="noopener" href="http://www.daovoice.io/">官网传送门</a></p>
+<p>DaoVoice有点毛病，Github不能登录。微信我没尝试过，我就用了邮箱注册。而且这个邀请码在这里吓唬人，不填其实也不要紧的。</p>
+<p><img src= "https://pic.baixiongz.com/2020/08/11/5e6c7df845912.gif" data-lazy-src="https://s1.ax1x.com/2020/06/05/tDJmM4.png" alt="tDJmM4.png"></p>
+<p>保管好API token，下面要用。</p>
+<h1 id="安装DaoVoice-gt-在-config-yml中启用DaoVoice"><a href="#安装DaoVoice-gt-在-config-yml中启用DaoVoice" class="headerlink" title="安装DaoVoice=&gt;在_config.yml中启用DaoVoice"></a>安装DaoVoice=&gt;在_config.yml中启用DaoVoice</h1><p>打开主题文件夹的<code>_config.yml</code>，在大约468行找到Tidio。</p>
+<p><img src= "https://pic.baixiongz.com/2020/08/11/5e6c7df845912.gif" data-lazy-src="https://s1.ax1x.com/2020/06/05/tDJ8JK.png" alt="tDJ8JK.png"></p>
+<p>把<code>enable</code>改为<code>true</code>，然后再<code>app_id</code>后填上从DaoVoice官网获取的API token。</p>
+<blockquote>
+<p>注意</p>
+<p><code>app_id:</code>后面必须有一个空格，不然Hexo会报错。</p>
+</blockquote>
+<p>之后，hexo cl&amp;&amp;hexo g -d看看效果。</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">南岩</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://nanyan666.com/5741.html">https://nanyan666.com/5741.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://nanyan666.com" target="_blank">南岩666のBlog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a><a class="post-meta__tags" href="/tags/Tidio/">Tidio</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/7468176.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/876.html"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/4602746.jfif" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hexo链接优化</div></div></a></div><div class="next-post pull-right"><a href="/942c.html"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/henryhe613/pic/img/OIP.jfif" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Valine配置及安装</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a target="_blank" rel="noopener" href="//58.html" title="更换设备继续Hexo"><img class="relatedPosts_cover" data-lazy-src="https://pic.baixiongz.com/2020/08/09/39b3a7eda0525.jpeg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-16</div><div class="relatedPosts_title">更换设备继续Hexo</div></div></a></div><div class="relatedPosts_item"><a target="_blank" rel="noopener" href="//1583.html" title="第一次使用GitHub+Hexo"><img class="relatedPosts_cover" data-lazy-src="https://s1.ax1x.com/2020/05/16/YcGnUS.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2020-04-19</div><div class="relatedPosts_title">第一次使用GitHub+Hexo</div></div></a></div><div class="relatedPosts_item"><a target="_blank" rel="noopener" href="//9198.html" title="CloudFlare的Workers"><img class="relatedPosts_cover" data-lazy-src="https://pic.baixiongz.com/2020/08/17/fbd96c2be2626.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-30</div><div class="relatedPosts_title">CloudFlare的Workers</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Valine</span><label><input id="switch-comments-btn" type="checkbox"/><span class="slider"></span></label><span class="second-comment">Gitalk</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="gitalk-container"></div></div></div></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 南岩</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js', () => {
+      pangu.spacingElementById('content-inner')
+    })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguFn)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    window.valine = new Valine({
+      el: '#vcomment',
+      appId: 'vV8xrCftYBqSQPi5d9VjqpCa-MdYXbMMI',
+      appKey: 'laabeUqxowanTlVwo4LsyxKI',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: true,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    });
+    if ('nick,mail') { valine.config.requiredFields= 'nick,mail'.split(',') }
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk({
+      clientID: '3fad84a91c4f904a00a7',
+      clientSecret: '7ea5278f3827c82e8813d0f67bcb8e813e615e39',
+      repo: 'henryhe613',
+      owner: 'HenryHe613',
+      admin: ['HenryHe613'],
+      id: '774c4003e9736ca73b2a4b41f2aac1d8',
+      language: 'zh-CN',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    $.getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js', initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Valine' === 'Gitalk' || !true) {
+  if (true) loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/baidu-auto-push.js"></script><script src="https://cdn.jsdelivr.net/gh/henryhe613/cdn@latest/Hexo/banner.js"></script><canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script></div></body></html>
